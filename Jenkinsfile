@@ -1,10 +1,9 @@
 pipeline {
     agent any
-
     stages {
-        stage('Hello') {
+        stage('Clone') {
             steps {
-                echo 'Hello World'
+                git 'https://github.com/khai123-2/demo-ci-cd.git'
             }
         }
     }
