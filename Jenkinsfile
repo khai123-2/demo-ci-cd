@@ -1,10 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('Create') {
+        stage('Clone') {
             steps {
-                sh 'touch index.html'
-                echo 'Success'
+                git branch: 'main', url: 'https://github.com/khai123-2/demo-ci-cd.git'
             }
         }
     }
