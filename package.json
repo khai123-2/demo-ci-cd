@@ -1,0 +1,14 @@
+{
+  "name": "demo-ci-cd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/khai123-2/demo-ci-cd.git",
+  "author": "khai123-2 <tranquangkhai9102gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
