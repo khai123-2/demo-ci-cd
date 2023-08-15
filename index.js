@@ -10,6 +10,10 @@ app.get("/home", (req, res) => {
 app.get("/", (req, res) => {
   res.send("xin chao");
 });
+
+app.get("/index", (req, res) => {
+  res.send("index");
+});
 app.listen(PORT, () => {
   console.log("App is running in port " + PORT);
 });
