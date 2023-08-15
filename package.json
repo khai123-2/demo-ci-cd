@@ -6,9 +6,18 @@
   "author": "khai123-2 <tranquangkhai9102gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js",
+    "build": "babel index.js -d dist",
+    "prod": "yarn build && node ./dist/index.js"
   },
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.10",
+    "@babel/core": "^7.22.10",
+    "@babel/plugin-transform-runtime": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
+    "nodemon": "^3.0.1"
   }
 }
