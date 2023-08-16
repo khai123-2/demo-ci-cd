@@ -20,6 +20,9 @@ pipeline {
                 sh 'echo y | docker container prune '
 
                 sh 'docker container run -d --rm --name khaitran_demo-ci-cd -p 5001:8081  khaitran0910/demo-ci-cd'
+
+                //clean to save disk
+                sh "docker image rm khaitran0910/demo-ci-cd:latest"
             }
         }
     } 
