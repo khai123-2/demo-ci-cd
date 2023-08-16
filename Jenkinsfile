@@ -1,8 +1,12 @@
 pipeline {
-    agent {
-        docker { image 'node:18-alpine' }
-    }
+    agent any
     stages {
+         stage('Clone Stage') {
+            
+            steps {
+                git branch: 'main', url: 'https://github.com/khai123-2/demo-ci-cd.git'
+            }
+        }
          stage('Build docker and run container') {
 
             steps {
