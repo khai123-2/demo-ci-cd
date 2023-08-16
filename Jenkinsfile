@@ -10,7 +10,7 @@ pipeline {
                     sh 'docker push khaitran0910/demo-ci-cd'
 
                     //clean to save disk
-                    sh 'docker image rm khaitran0910/demo-ci-cd:latest || echo "this container does not exist" '
+                    sh 'docker image rm khaitran0910/demo-ci-cd || echo "this container does not exist" '
                 }   
             }
         }
