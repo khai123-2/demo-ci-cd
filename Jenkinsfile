@@ -8,6 +8,9 @@ pipeline {
 
                     sh 'docker build -t khaitran0910/demo-ci-cd .'
                     sh 'docker push khaitran0910/demo-ci-cd'
+
+                    //clean to save disk
+                    sh 'docker image rm khaitran0910/demo-ci-cd:latest || echo "this container does not exist" '
                 }   
             }
         }
@@ -21,8 +24,6 @@ pipeline {
 
                 sh 'docker container run -d --rm --name khaitran_demo-ci-cd -p 5001:8081  khaitran0910/demo-ci-cd'
 
-                //clean to save disk
-                sh "docker image rm khaitran0910/demo-ci-cd:latest"
             }
         }
     } 
