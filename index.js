@@ -4,7 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 8081;
 
 app.get("/home", (req, res) => {
-  res.send("Hello world");
+  res.send("Hello world khai");
 });
 
 app.get("/", (req, res) => {
