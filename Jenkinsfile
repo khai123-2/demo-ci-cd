@@ -2,7 +2,7 @@ pipeline {
     agent none
     stages {
          stage('Packaging/Pushing imagae') {
-            agent { node {label 'master'}}
+            agent { node {label 'linux'}}
             steps {
                 withDockerRegistry(credentialsId: 'dockerhub', url: 'https://index.docker.io/v1/') {
 
