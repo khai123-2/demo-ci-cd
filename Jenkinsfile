@@ -1,8 +1,8 @@
 pipeline {
-    agent any
+    agent none
     stages {
          stage('Packaging/Pushing imagae') {
-
+            agent { node {label 'master'}}
             steps {
                 withDockerRegistry(credentialsId: 'dockerhub', url: 'https://index.docker.io/v1/') {
 
@@ -15,7 +15,7 @@ pipeline {
             }
         }
         stage('Deploy Express App to DEV') {
-
+            agent any
             steps {
                 echo 'Deploying and cleaning'
                 sh 'docker image pull khaitran0910/demo-ci-cd'
